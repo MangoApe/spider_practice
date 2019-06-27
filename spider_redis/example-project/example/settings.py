@@ -8,6 +8,8 @@
 SPIDER_MODULES = ['example.spiders']
 NEWSPIDER_MODULE = 'example.spiders'
 
+REDIS_URL = 'redis://127.0.0.1:6379 '
+
 USER_AGENT = 'scrapy-redis (+https://github.com/rolando/scrapy-redis)'
 
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
