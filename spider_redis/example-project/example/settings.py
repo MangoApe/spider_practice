@@ -10,7 +10,7 @@ NEWSPIDER_MODULE = 'example.spiders'
 
 REDIS_URL = 'redis://127.0.0.1:6379 '
 
-USER_AGENT = 'scrapy-redis (+https://github.com/rolando/scrapy-redis)'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
 
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
@@ -23,6 +23,7 @@ ITEM_PIPELINES = {
     'example.pipelines.ExamplePipeline': 300,
     'scrapy_redis.pipelines.RedisPipeline': 400,
 }
+ROBOTSTXT_OBEY = False
 
 LOG_LEVEL = 'DEBUG'
 

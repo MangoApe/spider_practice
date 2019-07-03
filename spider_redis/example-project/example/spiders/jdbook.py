@@ -18,7 +18,7 @@ class JdbookSpider(scrapy.Spider):
             #获取小分类名称：
             em_list = dt.xpath('./following-sibling::*[1]/em')
             for em in em_list:
-                em_name = em.xpath("./a/text()").extract_first().unicode()
+                em_name = em.xpath("./a/text()").extract_first()
                 #url/文本内容
                 em_url = 'https:' + em.xpath("./a/@href").extract_first()
                 #构造发送小分类列表页的请求--》 parse——list
@@ -32,7 +32,7 @@ class JdbookSpider(scrapy.Spider):
     def parse_list(self, response):
         li_list = response.xpath('//div[@id="plist"]//li')
         for li in li_list:
-            name = li.xpath('.//div[@class="p-name"]/a/em/text()').extract_first().strip().unicode()
+            name = li.xpath('.//div[@class="p-name"]/a/em/text()').extract_first().strip()
             skuid = li.xpath('./div[1]/@data-sku').extract_first()
             if skuid != None:
                 price_url = 'https://p.3.cn/prices/mgets?&skuIds=J_' + skuid
@@ -44,13 +44,9 @@ class JdbookSpider(scrapy.Spider):
 
                 })
         #翻页: 获取下一页的url
-        next_href = response.xpath('//a[@class="pn-next"]/@href').extract_first()
-        print('****************************************')
-        print(next_href)
-        print('****************************************')
-
+        next_href = response.xpath("//a[@class='pn-next']/@href")
         if next_href != None:
-            next_url = 'https://list.jd.com/' + next_href
+            next_url = 'https://list.jd.com' + next_href
             yield scrapy.Request(next_url, callback=self.parse_list, meta={
                 'dt_name': response.meta['dt_name'],
                 'em_name': response.meta['em_name'],
@@ -72,3 +68,4 @@ class JdbookSpider(scrapy.Spider):
         item['em_url'] = response.meta['em_url']
 
         yield item
+
