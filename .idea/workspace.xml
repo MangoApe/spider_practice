@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2687855-a179-4b16-b0cb-e15659ea3b2d" name="Default Changelist" comment="JD project">
-      <change afterPath="$PROJECT_DIR$/spider_redis/example-project/example/spiders/jdbook.py" afterDir="false" />
+    <list default="true" id="b2687855-a179-4b16-b0cb-e15659ea3b2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Book/0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Book/Book/0.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JD/JD/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/JD/JD/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JD/JD/spiders/jdbook.py" beforeDir="false" afterPath="$PROJECT_DIR$/JD/JD/spiders/jdbook.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_redis/example-project/example/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_redis/example-project/example/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_redis/example-project/example/spiders/myspider_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_redis/example-project/example/spiders/myspider_redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/Book/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book/Book/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/Book/spiders/dangdang.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book/Book/spiders/dangdang.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,29 +15,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/spider$jdbook.coverage" NAME="jdbook Coverage Results" MODIFIED="1561707834989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JD/JD/spiders" />
+    <SUITE FILE_PATH="coverage/spider$jdbook.coverage" NAME="jdbook Coverage Results" MODIFIED="1562146413791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JD/JD/spiders" />
     <SUITE FILE_PATH="coverage/spider$items.coverage" NAME="items Coverage Results" MODIFIED="1560449790430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tencent/Tencent" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1601993469">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.435" value="1" />
-          <entry key="project.open.time.5" value="9" />
+          <entry key="project.open.time.5" value="10" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="cfg" value="5" />
+          <entry key="html" value="2" />
           <entry key="json" value="3" />
           <entry key="json&#13;&#10;" value="1" />
-          <entry key="py" value="74" />
+          <entry key="py" value="82" />
           <entry key="rst" value="2" />
           <entry key="txt" value="23" />
           <entry key="yml" value="1" />
@@ -47,10 +47,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="1" />
+          <entry key="HTML" value="2" />
           <entry key="Ini" value="5" />
           <entry key="JSON" value="3" />
           <entry key="PLAIN_TEXT" value="24" />
-          <entry key="Python" value="74" />
+          <entry key="Python" value="82" />
           <entry key="ReST" value="2" />
           <entry key="YAML" value="1" />
         </counts>
@@ -58,26 +59,58 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="2" />
-          <entry key="py" value="4348" />
-          <entry key="txt" value="10" />
+          <entry key="py" value="6198" />
+          <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="4348" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="Python" value="6198" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/spiders/myspider_redis.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Book/Book/spiders/dangdang.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="765">
+              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
+                <marker date="1562168674232" expanded="true" signature="477:573" ph="..." />
+                <marker date="1562168674232" expanded="true" signature="2075:2084" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Book/Book/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JD/JD/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="11" selection-start-line="18" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -93,6 +126,13 @@
       <find>Mango</find>
       <find>REDIS</find>
       <find>name</find>
+      <find>U</find>
+      <find>level_one</find>
+      <find>小说</find>
+      <find>sidemenu</find>
+      <find>电子书</find>
+      <find>print</find>
+      <find>RI</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,6 +160,8 @@
         <option value="$PROJECT_DIR$/../Python爬虫/11day/code/2.6.2/JD/JD/spiders/jdbook.py" />
         <option value="$PROJECT_DIR$/JD/JD/spiders/jdbook.py" />
         <option value="$PROJECT_DIR$/spider_redis/example-project/example/spiders/myspider_redis.py" />
+        <option value="$PROJECT_DIR$/Book/Book/spiders/dangdang.py" />
+        <option value="$PROJECT_DIR$/Book/Book/settings.py" />
       </list>
     </option>
   </component>
@@ -129,8 +171,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="838" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -139,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,10 +188,40 @@
               <item name="spider练习" type="b2602c69:ProjectViewProjectNode" />
               <item name="spider练习" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spider练习" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spider练习" type="462c0819:PsiDirectoryNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spider练习" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spider练习" type="462c0819:PsiDirectoryNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spider练习" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spider练习" type="462c0819:PsiDirectoryNode" />
+              <item name="spider_redis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spider练习" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spider练习" type="462c0819:PsiDirectoryNode" />
+              <item name="spider_redis" type="462c0819:PsiDirectoryNode" />
+              <item name="example-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spider练习" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spider练习" type="462c0819:PsiDirectoryNode" />
+              <item name="spider_redis" type="462c0819:PsiDirectoryNode" />
+              <item name="example-project" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561651830859</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DangDang Book">
+      <created>1562129289975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562129289975</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -270,9 +348,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="694" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2929448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18620269" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -286,7 +364,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37755102" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -326,7 +404,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JD project" />
-    <option name="LAST_COMMIT_MESSAGE" value="JD project" />
+    <MESSAGE value="DangDang Book" />
+    <option name="LAST_COMMIT_MESSAGE" value="DangDang Book" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -355,6 +434,21 @@
           <url>file://$PROJECT_DIR$/../Python爬虫/11day/code/2.6.2/JD/JD/spiders/jdbook.py</url>
           <line>51</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Book/Book/spiders/dangdang.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Book/Book/spiders/dangdang.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Book/Book/spiders/dangdang.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -542,20 +636,10 @@
     <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/spiders/jdbook.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/JD/JD/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="18" column="81" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/spiders/dmoz.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,17 +676,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/settings.py">
+    <entry file="file://$PROJECT_DIR$/Book/0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="462">
+          <caret line="764" column="53" selection-start-line="764" selection-start-column="50" selection-end-line="764" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/spiders/myspider_redis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state>
+          <caret column="19" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book/Book/spiders/dangdang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+            <marker date="1562168674232" expanded="true" signature="477:573" ph="..." />
+            <marker date="1562168674232" expanded="true" signature="2075:2084" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD/JD/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="11" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_redis/example-project/example/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book/Book/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
