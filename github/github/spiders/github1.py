@@ -21,6 +21,6 @@ class Github1Spider(scrapy.Spider):
     def parse(self, response):
         # print(response.body.decode())
         with open('github.txt', 'w')as f:
-            f.write(response.body.decode())
+            f.write(response.body.decode('utf-8'))
         print(response.status)
 
