@@ -5,8 +5,42 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+from boss.boss.settings import USER_AGENTS_LIST
 from scrapy import signals
+import random
+import base64
 
+# 代理隧道验证信息  这个是在那个网站上申请的
+proxyServer = 'ahbb.wdnodes.com' # 收费的代理ip服务器地址，这里是abuyun
+proxyUser = '524861216@qq.com'
+proxyPass = 'Wearem2010'
+proxyAuth = "Basic " + base64.b64encode(proxyUser + ":" + proxyPass)
+
+class ProxyMiddleware(object):
+    def process_request(self, request, spider):
+        # 设置代理
+        request.meta["proxy"] = proxyServer
+        # 设置认证
+        request.headers["Proxy-Authorization"] = proxyAuth
+
+    def process_response(self, request, response, spider):
+        if response.status != '200' and response.status != '302' and response.status != '301':
+            # 此时对代理ip进行操作，比如删除
+            return request
+
+
+
+
+
+class UserAgentMiddleware(object):
+    def process_request(self, request, spider):
+        user_agent = random.choice(USER_AGENTS_LIST)
+        request.headers['User-Agent'] = user_agent
+
+class CheckUA(object):
+    def process_response(self, request, response, spider):
+        print(request.headers['User-Agent'])
+        return response
 
 class BossSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
