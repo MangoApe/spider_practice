@@ -5,23 +5,20 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-from boss.boss.settings import USER_AGENTS_LIST
+from boss.settings import USER_AGENTS_LIST
+# from boss.settings import proxies
 from scrapy import signals
 import random
 import base64
 
-# 代理隧道验证信息  这个是在那个网站上申请的
-proxyServer = 'ahbb.wdnodes.com' # 收费的代理ip服务器地址，这里是abuyun
-proxyUser = '524861216@qq.com'
-proxyPass = 'Wearem2010'
-proxyAuth = "Basic " + base64.b64encode(proxyUser + ":" + proxyPass)
-
 class ProxyMiddleware(object):
     def process_request(self, request, spider):
-        # 设置代理
-        request.meta["proxy"] = proxyServer
-        # 设置认证
-        request.headers["Proxy-Authorization"] = proxyAuth
+        # proxies可以在settings.py中，也可以来源于代理ip的webapi
+        # proxy = random.choice(proxies)
+        proxy = 'https://111.77.21.216:894'
+        # 免费的会失效，报 111 connection refused 信息！重找一个代理ip再试
+        request.meta['proxy'] = proxy
+        return None # 可以不写return
 
     def process_response(self, request, response, spider):
         if response.status != '200' and response.status != '302' and response.status != '301':
@@ -31,16 +28,20 @@ class ProxyMiddleware(object):
 
 
 
-
 class UserAgentMiddleware(object):
     def process_request(self, request, spider):
-        user_agent = random.choice(USER_AGENTS_LIST)
-        request.headers['User-Agent'] = user_agent
+        if spider.name == 'bossspider':
+            user_agent = random.choice(USER_AGENTS_LIST)
+            request.headers['User-Agent'] = user_agent
+
 
 class CheckUA(object):
     def process_response(self, request, response, spider):
         print(request.headers['User-Agent'])
         return response
+
+
+
 
 class BossSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,

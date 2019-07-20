@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from time import sleep
 
 
 class BossspiderSpider(scrapy.Spider):
@@ -15,6 +16,7 @@ class BossspiderSpider(scrapy.Spider):
         print (len(job_list))
         #遍历职位列表
         for job in job_list:
+            sleep(1)
             item = {}
             #获取职位名称
             item['job_name'] = job.xpath(".//div[@class='job-title']/text()").extract_first()
@@ -30,7 +32,7 @@ class BossspiderSpider(scrapy.Spider):
             item['year'] = job.xpath(".//div[@class='info-primary']/p/text()[2]").extract_first()
             #获取公司名字
             item['company'] = job.xpath(".//div[@class='company-text']/h3/a/text()").extract_first()
-            print(item)
+            # print(item)
             yield scrapy.Request(item['job_url'], callback=self.parse_detail, meta={
                 'job_name': item['job_name'],
                 'job_url': item['job_url'],
@@ -38,10 +40,30 @@ class BossspiderSpider(scrapy.Spider):
                 'salary': item['salary'],
                 'education': item['education'],
                 'year': item['year'],
-                'company':item['company']
+                'company': item['company']
             })
+
+
+        #实现翻页
+
+        next_href = response.xpath("//div[@class='page']/a[@class='next']/@href").extract_first()
+        next_url = "https://www.zhipin.com" + next_href
+        item['next_url'] = next_url
+        print(item)
+        if next_url is not None:
+
+            yield scrapy.Request(next_url, callback=self.parse,meta={
+                "item": item
+            })
+
     def parse_detail(self, response):
         item = response.meta
-        item['description'] = response.xpath("//div[@class='detail-content']/div[1]/div/text()").getall().replace(' ', '')
+        sleep(1)
+        #css样式提取
+        # detail = response.css('div.job-sec div.text ::text').extract()
+        #xpath提取
+        detail = response.xpath('//div[@class="job-sec"]/div[@class="text"]/text()').extract()
+        details = ''.join(detail).replace(' ', '')
+        item['description'] = details
         item['location'] = response.xpath("//div[@class='location-address']/text()").extract_first()
-        print(item)
+        yield item
